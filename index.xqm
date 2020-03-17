@@ -1,3 +1,8 @@
+(:Par Xavier-L. Salvador:)
+(:Cichier à placer dans le répertoire webapp:)
+(:C'est une bibliothèque de fonction appelée par l'application:)
+(:Par exemple en définissant une fois pour toute une fonction xls:template($contenu), on a créé un consturcteur de pages :)
+
 module namespace  xls = "http://www.page.fr" ;
 
 declare function xls:template($contenu) {
