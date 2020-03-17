@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="classeTILDE">
+    <xs:complexType>
+      <xs:sequence>
+        
+
+              <xs:element name="fiche" minOccurs="0" maxOccurs="200">
+                <xs:complexType>
+                 <xs:attribute name="id" type="xs:integer"/>
+                  <xs:sequence>
+                    <xs:element name="ide" type="xs:string" minOccurs="0" maxOccurs="200"/>
+                    <xs:element name="identite">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Sexe" type="xs:string"/>
+                          <xs:element name="Nom" type="xs:string"/>
+                          <xs:element name="Prenom" type="xs:string"/>
+                          <xs:element name="Taille" type="xs:string"/>
+                          <xs:element name="dateDeNaissance">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Jour" type="xs:integer"/>
+                                <xs:element name="mois" type="xs:integer"/>
+                                <xs:element name="annee" type="xs:integer"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="lieuDeNaissance">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Ville" type="xs:string"/>
+                                <xs:element name="Pays" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Statut" type="xs:string"/>
+                    <xs:element name="coordonnees">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="adresse">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="numero" type="xs:integer"/>
+                                <xs:element name="voie" type="xs:string"/>
+                                <xs:element name="codePostal" type="xs:string"/>
+                                <xs:element name="ville" type="xs:string"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="numeroDeTelephone">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="mobile" type="xs:integer"/>
+                                <xs:element name="fixe" type="xs:integer"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="mail" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
