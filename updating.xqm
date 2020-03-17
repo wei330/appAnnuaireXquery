@@ -19,12 +19,13 @@ declare
      <adresse>{$adresse}</adresse>
     </entry>
     
-    let $validate := validate:xsd-info($entry,'/Users/xavier/basex9TILDE/fichClass.xsd')
+    let $validate := validate:xsd-info($entry,'fichClass.xsd')
 
      return 
-
+       (:C'est ici qu'on insère le text sur le xsd si on le souhaite:)
+       (: if ($validate='') then:)
       insert node $entry into db:open('annuaireTilde')/bdd
-   
+       (:else ET CHOISIR UNE ACTION:)
     ,
     update:output(web:redirect('/annuaire')) (:db:output:)
 };
@@ -48,11 +49,14 @@ declare
      <prenom>{$prenom}</prenom>
      <adresse>{$adresse}</adresse>
     </entry>
+    let $validate := validate:xsd-info($entry,'fichClass.xsd')
     
      for $x in db:open('annuaireTilde')/bdd/entry[@id = $id]
       return 
+       (:C'est ici qu'on insère le text sur le xsd si on le souhaite:)
+       (: if ($validate='') then:)
        replace node $x with $entry 
-   
+       (:else CHOISIR UNE ACTION:)
     ,
     update:output(web:redirect('/annuaire')) (:db:output:)
 };
