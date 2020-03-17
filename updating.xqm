@@ -1,5 +1,6 @@
+(:Par Xavier-L. Salvador:)
+(:Les fonctions d'écritures en base. Le fichier est à placer dans le webapp de Basex:)
 module namespace page = 'http://mapage.com';
-
 
 declare
  %updating
