@@ -1,3 +1,7 @@
+(:pas Xavier-Laurent Salvador:)
+(:Ce finchier est à placer dans webapp:)
+(:Il met en action les URL d'ajout, de consultation, de modification et de recherche dans la base:)
+
 module namespace  page = "http://www.page.fr";
 import module namespace xls = 'http://www.page.fr' at 'index.xqm';
 
