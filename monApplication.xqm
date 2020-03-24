@@ -1,7 +1,6 @@
 (:pas Xavier-Laurent Salvador:)
 (:Ce finchier est à placer dans webapp:)
 (:Il met en action les URL d'ajout, de consultation, de modification et de recherche dans la base:)
-
 module namespace  page = "http://www.page.fr";
 import module namespace xls = 'http://www.page.fr' at 'index.xqm';
 
@@ -37,8 +36,7 @@ declare
           <div class="adresse">{$x/adresse}</div>
           <div id="menuFloat">
           <div><a class="bouton" href="/annuaireCorrect/{data($x/@id)}">Corriger</a></div>
-          {if (session:id()="node05rbbticumxm81lpvoxnqw1yz90") then
-          <div><a class="bouton" href="/annuaireDelete/{data($x/@id)}">Effacer</a></div>
+          { if ($xls:testadmin) then <div><a class="bouton" href="/annuaireDelete/{data($x/@id)}">Effacer</a></div>
           else "vous n'êtes pas administrateur"}
           </div>
          </div>
@@ -88,5 +86,7 @@ declare
     return 
      $x)
  };
+
+
 
 
