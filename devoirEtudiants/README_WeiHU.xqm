@@ -1,10 +1,8 @@
 module namespace  page = "http://www.page.fr";
 import module namespace hw = 'http://www.page.fr' at 'index.xqm';
-(:Nom: Hu:)
-(:Prénom: Wei:)
-(:Faculté: M2 Traitement automatique de la langue:)
+(:test1:)
 
-declare    (:une:)
+declare    (:première:)
   %rest:path("/Historia")
   %output:method("xhtml")
   function page:Historia() 
